@@ -45,7 +45,15 @@ INSTALLED_APPS = [
     'events',
     'django_filters',
     'drf_yasg',
+
 ]
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Basic': {
+            'type': 'basic'
+        }
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
