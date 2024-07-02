@@ -1,0 +1,30 @@
+## Docker run
+    - docker-compose up
+    - docker-compose exec rest-api python manage.py migrate
+    - docker-compose exec rest-api python manage.py createsuperuser
+#Manual for Django project
+## Gen requirement.txt
+ - pip freeze > requirements.txt
+## Migrate 
+ - python manage.py migrate -> Run migration
+ - python manage.py makemigrations -> Tạo mới migrattion
+## create super user
+ - python manage.py createsuperuser
+ username: cuongln
+ email: cuongln.hust@gmail.com
+ password: Mk1@2345
+## 
+├── mk1_django_base
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+├── manage.py
+└── events
+    ├── admin.py
+    ├── serializers.py
+    ├── __init__.py
+    ├── models.py
+    ├── urls.py
+    └── views.py
+## create app
+ - python manage.py startapp events

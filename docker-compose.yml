@@ -1,0 +1,22 @@
+services:
+  rest-api:
+      build: .
+      ports:
+        - "8000:8000"
+      volumes:
+        - ./mk1_django_base:/code
+      depends_on:
+        - postgres
+
+  postgres:
+    image: postgres:14.12-alpine
+    env_file: ".env.docker"
+    volumes:
+      - /var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/1-init.sql
+    ports:
+      - "${DATABASE_PORT}:5432"
+    environment:
+      - POSTGRES_USER=${DATABASE_USER}
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+      - POSTGRES_DB=${DATABASE_NAME}
