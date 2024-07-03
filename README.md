@@ -1,10 +1,25 @@
-## Docker run
+# Django REST API Boilerplate
+
+#### Tech Stack:
+
+ - **Web framework:** Django
+ - **Database:** PostgresSQL
+ - **Containerization:** Docker
+ - **Async-Task Queue:** Celery
+ - **Message-Broker:** RabbitMQ
+ - **WSGI Server:** Gunicorn
+ - **Documentation:** Swagger-UI
+
+# Docker run
     - docker-compose up
     - docker-compose exec rest-api python manage.py migrate
     - docker-compose exec rest-api python manage.py createsuperuser
 #Manual for Django project
+
 ## Gen requirement.txt
  - pip freeze > requirements.txt
+# Run django manual
+ - pip install -r requirements.txt
 ## Migrate 
  - python manage.py migrate -> Run migration
  - python manage.py makemigrations -> Tạo mới migrattion
@@ -29,5 +44,3 @@
 ## create app
  - python manage.py startapp app
 
-
- Features:
