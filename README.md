@@ -30,6 +30,7 @@
  email: cuongln.hust@gmail.com
  password: Mk1@2345
 ## 
+```
 ├── mk1_django_base
 │   ├── __init__.py
 │   ├── settings.py
@@ -42,6 +43,7 @@
     ├── models.py
     ├── urls.py
     └── views.py
+```
 ## create app
  - python manage.py startapp app
 
