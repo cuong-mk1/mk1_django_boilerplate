@@ -29,6 +29,8 @@
  username: cuongln
  email: cuongln.hust@gmail.com
  password: Mk1@2345
+ ## start server 
+  - python manage.py runserver
 ## 
 ```
 ├── mk1_django_base

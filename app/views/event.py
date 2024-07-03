@@ -2,9 +2,9 @@ from django.shortcuts import render
 # Create your views here.
 from  rest_framework  import viewsets
 from rest_framework.permissions import AllowAny
-from .models  import  Event
+from app.models.event  import  Event
 from rest_framework.views import APIView
-from .serializers  import  AppSerializer
+from app.serializers.event  import  EventSerializer
 from django.contrib.auth.models import User
 from rest_framework.authentication import TokenAuthentication
 from rest_framework import generics
@@ -20,4 +20,4 @@ def hello_world(request):
     return Response({'message': 'Hello, World!'})
 class  AppViewSet(viewsets.ModelViewSet):
   queryset  =  Event.objects.all()
-  serializer_class  =  AppSerializer
+  serializer_class  =  EventSerializer
