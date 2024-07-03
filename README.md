@@ -19,6 +19,7 @@
 ## Gen requirement.txt
  - pip freeze > requirements.txt
 # Run django manual
+ - cp .env.local .env
  - pip install -r requirements.txt
 ## Migrate 
  - python manage.py migrate -> Run migration
