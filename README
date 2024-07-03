@@ -19,7 +19,7 @@
 │   ├── settings.py
 │   ├── urls.py
 ├── manage.py
-└── events
+└── app
     ├── admin.py
     ├── serializers.py
     ├── __init__.py
@@ -27,4 +27,7 @@
     ├── urls.py
     └── views.py
 ## create app
- - python manage.py startapp events
+ - python manage.py startapp app
+
+
+ Features:
